@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<link href="css.css" rel="stylesheet" type="text/css" />
+<head>
+	<title>CP-project</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+</head>
+<body background="img/bg.jpg" style="background-attachment:fixed;">
+	<div class="container">
+		<div class="row">
+			<div class="col">
+				<img src="img/banners.jpg" class="img-fluid">
+			</div>
+		</div>
+    <div class="row">
+			<div class="col">
+            	<marquee class="asd"><h1>COMPUTER PROGRAMMING (2/2019) PROJECT<h1></marquee>
+			</div>
+    </div>
+    <div class="row">
+    <div class="col-md-1"> 
+    </div>
+    <div class="col-md-10"> 
+      <div class="row" style="padding-top: 20px; align-content: center;"> 
+        <div class="col-md-4"> 
+          <img src="img/sa1.jpg" class="img-fluid rounded-circle"> 
+        </div> 
+        <div class="col-md-4"> 
+          <img src="img/sa2.jpg" class="img-fluid rounded-circle"> 
+        </div> 
+        <div class="col-md-4"> 
+          <img src="img/sa3.jpg" class="img-fluid rounded-circle"> 
+        </div>  
+      </div>
+      <div class="col-md-1"> 
+      </div>
+    </div>
+    </div> 
+    <hr>
+    <div class="row">
+      <div class="col-md-12">
+        <p class="">1. ความเป็นมาของโครงงาน
+          ปัจจุบันประเทศไทยมีผู้พิการทางสายตาอยุ่จำนวนหนึ่งซึ่งยังไม่ได้รับการอำนวยความสะดวกทางด้านการเดินทาง 
+          ทางคณะผู้จัดทำได้เล็งเห็นถึงความสำคัญจุดนี้ จึงได้มีความคิดที่จะทำโครงการนี้ขึ้นมาเพื่ออำนวยความสะดวกแก่ผู้พิการทางสายตา
+           โดยการนำเอาเซนเซอร์อัลตร้าโซนิคเป็นตัวเช็คระยะสิ่งกีดขว้าง โดยมีการประมวลผลและแสดงผลออกมาในรูปแบบของเสียงเพื่อแจ้งเตือนผู้พิการทางสายตา
+          </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <p class="">2. วัตถุประสงค์ของโครงงาน
+          การศึกษาวิจัยมีวัตถุประสงค์ เพื่อทดลองการทางานของไม้เท้าคนตาบอดอัจฉริยะ และ เพื่อหาคุณภาพของไม้เท้าคนตาบอดอัจฉริยะ 
+          การวิจัยเป็นการวิจัยเชิงทดลอง (Experimental Research) และทีมงานหวังเป็นอย่างสูงว่าผลการทดลองดใช้จะแสดงให้เห็นถึง การทดลองไม้เท้าคนตาบอดอัจฉริยะ 
+          ที่การทำงานของเครื่องมีความเที่ยงตรงสูงและสามารถทำงานได้ตามวัตถุประสงค์ที่กำหนดไว้
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <p class="">3. เครื่องมือที่ใช้จัดทำ
+          – กล่องพลาสติก
+          – ไม้เท้าสำหรับผู้พิการทางสายตา
+          – Ultrasonic Sensor HC-04
+          – Arduino Uno R3
+          – Jumperwire
+          – Buzzer
+          – Battery 9v
+          </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <p class="">4. รูปภาพต้นแบบการดีไซน์วงจร
+        </p>
+      </div>
+      <div class="col-md-2"> 
+        <img src="img/e1.jpg" class="img-fluid rounded-circle"> 
+      </div> 
+      <div class="col-md-2"> 
+        <img src="img/e2.jpg" class="img-fluid rounded-circle"> 
+      </div> 
+      <div class="col-md-2"> 
+        <img src="img/e3.jpg" class="img-fluid rounded-circle"> 
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <p class="">5. Source Code<br>
+          // defines pins numbers<br>
+          const int trigPin = 9;<br>
+          const int echoPin = 10;<br>
+          const int buzzer = 11;<br>
+          <br>
+          // defines variables<br>
+          long duration;<br>
+          int distance;<br>
+          int safetyDistance;<br>
+          <br>
+          void setup() {<br>
+          pinMode(trigPin, OUTPUT); // Sets the trigPin as an Output<br>
+          pinMode(echoPin, INPUT); // Sets the echoPin as an Input<br>
+          pinMode(buzzer, OUTPUT);<br>
+          Serial.begin(9600); // Starts the serial communication<br>
+          }<br>
+          <br>
+          void loop() {<br>
+          // Clears the trigPin<br>
+          digitalWrite(trigPin, LOW);<br>
+          delayMicroseconds(2);<br>
+          <br>
+          // Sets the trigPin on HIGH state for 10micro seconds<br>
+          digitalWrite(trigPin, HIGH);<br>
+          delayMicroseconds(10);<br>
+          digitalWrite(trigPin, LOW);<br>
+          <br>
+          // Reads the echoPin, returns the sound wave travel time in microseconds<br>
+          duration = pulseIn(echoPin, HIGH);<br>
+          // Calculating the distance<br>
+          distance= duration*0.034/2;<br>
+          <br>
+          safetyDistance = distance;<br>
+          if (safetyDistance <= 50){<br>
+          digitalWrite(buzzer, HIGH);<br>
+          }<br>
+          <br>
+          else{
+          digitalWrite(buzzer, LOW);<br>
+          }<br>
+          <br>
+          // Prints the distance on the Serial Monitor<br>
+          Serial.print("Distance: ");<br>
+          Serial.println(distance);<br>
+          }<br>
+          </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+
+      </div>
+    </div> 
+    <div class="row">
+			<div class="col">
+              <p class="tb"  style="height: 60px;">รายชื่อผู้จัดทำ <br>
+                |นางสาวณัฐธิดา เพิ่มสว่าง 62070062| |นายธเนศวร อัครโชติวรรณ 62070086| |นายพศิน คูสุวรรณ 62070135| |นางสาวภํริชญา จานะพร 62070151|</p>
+			</div>
+    </div> 
+  </div>
+
+    
+</body>
+</html>

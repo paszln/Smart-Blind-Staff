@@ -1,0 +1,52 @@
+.asd{
+	color:#FFFFFF;
+	background-color:#333;
+	animation-name:mar 1s infinite;
+}
+@keyframes mar{
+	14%{text-shadow:red 2px 2px 10px;}
+	28%{text-shadow:orange 2px 2px 10px;}
+	42%{text-shadow:yellow 2px2px 10px;}
+	56%{text-shadow:green 2px 2px 10px;}
+	70%{text-shadow:blue 2px 2px 10px;}
+	84%{text-shadow:cyan 2px 2px 10px;}
+	100%{text-shadow:purple 2px 2px 10px;}
+}
+.asds{
+	color:#000000;
+	animation-name:mars 1s infinite;
+}
+@keyframes mars{
+	14%{text-shadow:red 2px 2px 10px;}
+	28%{text-shadow:orange 2px 2px 10px;}
+	42%{text-shadow:yellow 2px 2px 10px;}
+	56%{text-shadow:green 2px 2px 10px;}
+	70%{text-shadow:blue 2px 2px 10px;}
+	84%{text-shadow:cyan 2px 2px 10px;}
+	100%{text-shadow:purple 2px 2px 10px;}
+}
+/*.img-fluid{
+	animation-name:sha;
+	animation-duration:1s;
+	animation-iteration-count:infinite;
+}
+@keyframes sha{
+	14%{box-shadow: 0 0px 20px red;}
+	28%{box-shadow: 0 0px 20px orange;}
+	42%{box-shadow: 0 0px 20px yellow;}
+	56%{box-shadow: 0 0px 20px green;}
+	70%{box-shadow: 0 0px 20px blue;}
+	84%{box-shadow: 0 0px 20px cyan;}
+	100%{box-shadow: 0 0px 20px purple;}
+	
+}*/
+.container{
+	background-color:rgba(255, 255, 255, 0.5);
+	animation-name:sha 1s infinite;
+}
+.tb{
+	background-color: #363636;
+	text-align: center;
+	color: #FFFFFF;
+	font-size: 18px;
+}
