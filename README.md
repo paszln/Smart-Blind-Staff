@@ -6,4 +6,4 @@ Let's check it out!
 [Click here!](https://cp-project-a9c4a.web.app/)
 
 ## Youtube
-[Let us introduce you to ours project](https://youtu.be/qBEWCYm2aIg)
+[Let us introduce you to our project](https://youtu.be/qBEWCYm2aIg)
